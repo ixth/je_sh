@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #8cac0e;
+}
+
+.game {
+    display: flex;
+    position: relative;
+    width: 160px;
+    height: 144px;
+    overflow: hidden;
+    transform: scale(4);
+    image-rendering: pixelated;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    color: #0f3810;
+}
+
+.game__ready-screen {
+    text-align: center;
+}
+
+.game__warning {
+    margin-top: 1ex;
+    font-size: .8em;
+}
+
+.game__play {
+    all: unset;
+    border: 1px solid;
+    padding: 0 2px 2px;
+}
+
+.progress {
+    color: #0f3810;
+}
+
+    .progress__control {
+        width: 100px;
+        appearance: none;
+    }
+
+    .progress__control::-webkit-progress-bar {
+        border: 1px solid;
+        background: transparent;
+    }
+    .progress__control::-webkit-progress-value {
+        background-color: currentColor;
+    }
+
+.je_sh {
+    width: 100%;
+    height: 100%;
+    background: 0 0 / contain no-repeat url('./bg.png');
+}
+
+.je_sh::before {
+    --beat: calc(60s / 123);
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 104px;
+    height: 32px;
+    background: right bottom / contain no-repeat url('./coffee.png');
+    animation: slurp calc(var(--beat) * 6) steps(4, end) calc(var(--beat) * 3) infinite alternate;
+}
+
+@keyframes slurp {
+    0% { bottom: -3px }
+    100% { bottom: 1px }
+}
