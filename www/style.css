@@ -20,6 +20,14 @@ body {
     color: var(--color-0);
 }
 
+:link {
+    color: var(--color-0);
+}
+
+:visited {
+    background-color: var(--color-3);
+}
+
 .game {
     display: flex;
     position: relative;
