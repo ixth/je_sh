@@ -11,6 +11,7 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -21,28 +22,33 @@ body {
 }
 
 :link {
+    padding: 0 .2em;
+    margin: 0 -.2em;
     color: var(--color-0);
+    background-color: var(--color-2);
 }
 
 :visited {
-    background-color: var(--color-3);
+    color: var(--color-3);
+    background-color: var(--color-1);
 }
 
 .game {
     display: flex;
     position: relative;
-    width: 160px;
-    height: 144px;
-    overflow: hidden;
-    transform: scale(4);
-    image-rendering: pixelated;
+    width: 640px;
+    height: 576px;
+    margin: auto 0;
     align-items: center;
     justify-content: center;
     font-family: monospace;
+    overflow: hidden;
+    image-rendering: pixelated;
 }
 
 .game__ready-screen {
     text-align: center;
+    font-size: 4em;
 }
 
 .game__warning {
@@ -52,8 +58,8 @@ body {
 
 .game__play {
     all: unset;
-    border: 1px solid;
-    padding: 0 2px 2px;
+    border: 4px solid;
+    padding: 0 8px 8px;
 }
 
 .progress__control {
@@ -70,8 +76,8 @@ body {
 }
 
 .je_sh {
-    width: 100%;
-    height: 100%;
+    width: 640px;
+    height: 576px;
     background: 0 0 / contain no-repeat url('./bg.png');
 }
 
@@ -80,14 +86,18 @@ body {
     content: '';
     position: absolute;
     right: 0;
-    bottom: -3px;
-    width: 104px;
-    height: 32px;
+    bottom: -12px;
+    width: 416px;
+    height: 128px;
     background: right bottom / contain no-repeat url('./coffee.png');
     animation: slurp calc(var(--beat) * 6) steps(4, end) calc(var(--beat) * 3) infinite alternate;
 }
 
+.footer {
+    margin: 1ex 0;
+}
+
 @keyframes slurp {
-    0% { bottom: -3px }
-    100% { bottom: 1px }
+    0% { bottom: -12px }
+    100% { bottom: 4px }
 }
