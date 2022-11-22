@@ -1,3 +1,10 @@
+:root {
+    --color-0: #003f00;
+    --color-1: #2e7320;
+    --color-2: #8cbf0a;
+    --color-3: #a0cf0b;
+}
+
 html, body {
     height: 100%;
 }
@@ -9,7 +16,8 @@ body {
     margin: 0;
     align-items: center;
     justify-content: center;
-    background: #8cac0e;
+    background: var(--color-2);
+    color: var(--color-0);
 }
 
 .game {
@@ -23,7 +31,6 @@ body {
     align-items: center;
     justify-content: center;
     font-family: monospace;
-    color: #0f3810;
 }
 
 .game__ready-screen {
@@ -41,22 +48,18 @@ body {
     padding: 0 2px 2px;
 }
 
-.progress {
-    color: #0f3810;
+.progress__control {
+    width: 100px;
+    appearance: none;
 }
 
-    .progress__control {
-        width: 100px;
-        appearance: none;
-    }
-
-    .progress__control::-webkit-progress-bar {
-        border: 1px solid;
-        background: transparent;
-    }
-    .progress__control::-webkit-progress-value {
-        background-color: currentColor;
-    }
+.progress__control::-webkit-progress-bar {
+    border: 1px solid;
+    background: transparent;
+}
+.progress__control::-webkit-progress-value {
+    background-color: currentColor;
+}
 
 .je_sh {
     width: 100%;
