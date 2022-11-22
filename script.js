@@ -18,7 +18,7 @@ const main = async () => {
 
             audio.play();
         });
-    });
+    }, { once: true });
 };
 
 main().then(() => {
