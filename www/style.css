@@ -78,7 +78,7 @@ body {
 .je_sh {
     width: 640px;
     height: 576px;
-    background: 0 0 / contain no-repeat url('./bg.png');
+    background: 0 0 / contain no-repeat url('./bg.png?v=637cce01');
 }
 
 .je_sh::before {
@@ -89,7 +89,7 @@ body {
     bottom: -12px;
     width: 416px;
     height: 128px;
-    background: right bottom / contain no-repeat url('./coffee.png');
+    background: right bottom / contain no-repeat url('./coffee.png?v=637cce01');
     animation: slurp calc(var(--beat) * 6) steps(4, end) calc(var(--beat) * 3) infinite alternate;
 }
 
